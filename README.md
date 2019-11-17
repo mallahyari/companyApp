@@ -9,7 +9,7 @@ _Design an employee directory in the form of a web application for a company ABC
 2. [sbt](https://www.scala-sbt.org/download.html?_ga=2.252241996.410877668.1573953266-1944032210.1571247971) build tool
 
 ### MySQL Requirement
-MySQL database need to be installed, as this application uses MySQL as the database.
+MySQL database needs to be installed, as this application uses MySQL as the database.
 
 ### How to Run the Application
 1. Run the `create.sql` file using the following command to create the database along with all the tables and populate it with several dummy data:

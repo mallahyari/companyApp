@@ -1,0 +1,38 @@
+@(employee : Employee)(session : Http.Session)
+
+
+@layout("Employee Information")(session) {
+    @if(session.getOptional("username").isPresent) {
+        <div class="container">
+            <h3>Employee Details</h3>
+            <table data-toggle="table" class="table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@employee.fname</td>
+                        <td>@employee.lname</td>
+                        <td>@employee.email</td>
+                        <td>@employee.address</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="">
+                <a href="@routes.EmployeeController.edit(employee.id)" class="btn btn-primary">Edit</a>
+            </div>
+        </div>
+    }else {
+        <div class="container">
+            <h4>You need to sign in.</h4>
+        </div>
+    }
+
+}
+
+

@@ -1,0 +1,4 @@
+[0m[[0m[33mwarn[0m] [0m[0m[1] The maintainer is empty[0m
+[0m[[0m[33mwarn[0m] [0m[0mAdd this to your build.sbt[0m
+[0m[[0m[33mwarn[0m] [0m[0m  maintainer := "your.name@company.org"[0m
+[0m[[0m[32msuccess[0m] [0m[0mAll package validations passed[0m

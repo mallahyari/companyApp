@@ -1,0 +1,18 @@
+@(userForm : Form[User], session : Http.Session)
+
+@import helper._;
+
+
+@layout("Login Page")(session) {
+    @form(routes.EmployeeController.login(), Symbol("class") -> "form-signin") {
+        @CSRF.formField
+        @inputText(userForm("username"), Symbol("_label") -> "Username", Symbol("placeholder") -> "Username", Symbol("class") -> "form-control mb-4")
+        @inputText(userForm("password"), Symbol("_label") -> "Password", Symbol("type") -> "password", Symbol("placeholder") -> "Password", Symbol("class") -> "form-control mb-4")
+@*        <label for="username" class="sr-only">Email address</label>*@
+@*        <input type="text" id="username" class="form-control mb-4" placeholder="Username" required autofocus>*@
+@*        <label for="inputPassword" class="sr-only">Password</label>*@
+@*        <input type="password" id="inputPassword" class="form-control mb-4" placeholder="Password" required>*@
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    }
+}

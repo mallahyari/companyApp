@@ -1,0 +1,40 @@
+
+@import misc.Search
+@(myForm : Form[Search])(session : Http.Session)
+
+@import helper._
+
+@layout("Home Page")(session) {
+    @if(session.getOptional("success").isPresent) {
+        <div class="alert alert-warning col-md-6 m-3">
+            <strong>Done!</strong> @session.getOptional("success").get()
+        </div>
+    }
+
+    @form(action=routes.EmployeeController.search, Symbol("class") -> "m-3") {
+        @CSRF.formField
+        <div class="row">
+            <div class="col">
+                <input name="query" value="" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+@*//                @inputText(myForm("query"), Symbol("name") -> "fname", Symbol("_label") -> null, Symbol("placeholder") -> "Search", Symbol("class") -> "form-control")*@
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </div>
+        </div>
+        <div class="row input-group">
+            <div class="col-md-2">
+                <input type="radio" name="searchType" class="col-md-2" value="email" checked>Email
+            </div>
+            <div class="col-md-2">
+                <input type="radio" name="searchType" class="col-md-2" value="phone">Phone
+            </div>
+        </div>
+
+
+    }
+
+
+
+}

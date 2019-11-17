@@ -1,0 +1,20 @@
+@(myForm : Form[Employee])(session : Http.Session)
+
+    @import helper._
+
+    @layout("Edit Employee")(session) {
+
+
+        @form(action = routes.EmployeeController.update(myForm.get().id)) {
+            @CSRF.formField
+            @inputText(myForm("title"),Symbol("_label") -> "Title", Symbol("name") -> "tt", Symbol("size") -> "100", Symbol("class") -> "form-control")
+            @inputText(myForm("year"),Symbol("_label") -> "Year",Symbol("name") -> "year", Symbol("size") -> "10", Symbol("class") -> "form-control col-md-2")
+            @inputText(myForm("rating"),Symbol("_label") -> "Rating",Symbol("name") -> "rating", Symbol("size") -> "10", Symbol("class") -> "form-control col-md-2")
+            @inputText(myForm("company"),Symbol("_label") -> "Company",Symbol("name") -> "company", Symbol("size") -> "100", Symbol("class") -> "form-control")
+
+            <button type="submit" name="save" class="btn btn-primary">Update</button>
+
+        }
+    }
+
+

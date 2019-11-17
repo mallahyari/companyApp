@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sbt: com.h2database:h2:1.4.199:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/h2database/h2/1.4.199/h2-1.4.199.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

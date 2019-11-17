@@ -1,0 +1,69 @@
+@import java.util
+@import misc.Search
+@(myForm : Form[Search], employees: Optional[util.List[Employee]])(session : Http.Session)
+
+@import helper._
+
+
+@layout("Search Result")(session) {
+    @form(action=routes.EmployeeController.search, Symbol("class") -> "m-3") {
+        @CSRF.formField
+        <div class="row">
+            <div class="col">
+                <input name="query" value="" class="form-control mr-md-2 " type="search" placeholder="Search" aria-label="Search">
+                @*//                @inputText(myForm("query"), Symbol("name") -> "fname", Symbol("_label") -> null, Symbol("placeholder") -> "Search", Symbol("class") -> "form-control")*@
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-success my-sm-0" type="submit">Search</button>
+            </div>
+        </div>
+        <div class="row input-group">
+            <div class="col-md-2">
+                <input type="radio" name="searchType" class="col-md-2" value="email" checked>Email
+            </div>
+            <div class="col-md-2">
+                <input type="radio" name="searchType" class="col-md-2" value="phone">Phone
+            </div>
+        </div>
+    }
+    <div id="empTableHolder" class="container">
+        @if(employees.isPresent) {
+            <h4 class="flex-md-row">Search Result(s):</h4>
+            <table id="empTable">
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Office</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </thead>
+                <tbody>
+                @for(employee <- employees.get()) {
+                    <tr>
+                        <td>@employee.fname</td>
+                        <td>@employee.lname</td>
+                        <td>@employee.email</td>
+                        <td>@employee.office.officename</td>
+                        <td>
+                        @for(phone <- employee.phones) {
+                            <span>@phone.phonenumber</span><br/>
+                        }
+                        </td>
+
+                        @if(session.getOptional("admin").isPresent) {
+                            <td>@employee.address</td>
+                        }else if(session.getOptional("username").get() == employee.email) {
+                            <td>@employee.address</td>
+                        }else {
+                            <td></td>
+                        }
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }else {
+            <h3>No Employees Found!</h3>
+        }
+    </div>
+}

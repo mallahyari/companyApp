@@ -1,0 +1,26 @@
+[0m[[0m[31merror[0m] [0m[0mjava.lang.IllegalStateException: Tried to invoke register on closed repostitory sbt.internal.nio.FileTreeRepositoryImpl@221be247[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.nio.FileTreeRepositoryImpl.throwIfClosed(FileTreeRepositoryImpl.scala:142)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.nio.FileTreeRepositoryImpl.register(FileTreeRepositoryImpl.scala:111)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.Continuous$FileStampRepository.register(Continuous.scala:1105)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.nio.Settings$.$anonfun$inputPathSettings$3(Settings.scala:138)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.List.foreach(List.scala:392)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.nio.Settings$.$anonfun$inputPathSettings$2(Settings.scala:138)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.nio.Settings$.$anonfun$inputPathSettings$2$adapted(Settings.scala:137)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Option.foreach(Option.scala:407)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.nio.Settings$.$anonfun$inputPathSettings$1(Settings.scala:137)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:67)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:281)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:19)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.work(Execute.scala:290)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:281)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:178)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:37)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1135)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:844)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / unmanagedSources / [31mallInputPathsAndAttributes[0m) java.lang.IllegalStateException: Tried to invoke register on closed repostitory sbt.internal.nio.FileTreeRepositoryImpl@221be247[0m

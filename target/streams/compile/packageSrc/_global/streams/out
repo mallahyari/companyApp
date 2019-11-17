@@ -1,0 +1,35 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/mehdi/playProjects/employeedirectory/target/scala-2.13/employeedirectory_2.13-1.0-SNAPSHOT-sources.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	logback.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/conf/logback.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/conf/application.conf[0m
+[0m[[0m[0mdebug[0m] [0m[0m	routes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/conf/routes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	evolutions/default/1.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/conf/evolutions/default/1.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	misc/Search.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/app/misc/Search.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models/Phone.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/app/models/Phone.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models/OfficeLocation.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/app/models/OfficeLocation.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models/User.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/app/models/User.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models/Office.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/app/models/Office.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models/Employee.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/app/models/Employee.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/HomeController.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/app/controllers/HomeController.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/EmployeeController.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/app/controllers/EmployeeController.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	persist/UserPersist.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/app/persist/UserPersist.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	persist/OfficePersist.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/app/persist/OfficePersist.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	persist/PhonePersist.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/app/persist/PhonePersist.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	persist/EmployeePersist.java[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mehdi/playProjects/employeedirectory/app/persist/EmployeePersist.java[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

@@ -1,0 +1,32 @@
+@import java.util
+@(myForm : Form[Employee], offices : util.Map[String,String])(session : Http.Session)
+
+@import helper._
+
+@layout("Create Employee")(session){
+    @form(action = routes.EmployeeController.save()) {
+            @CSRF.formField
+            @inputText(myForm("fname"),Symbol("_label") -> "First Name", Symbol("name") -> "fname", Symbol("class") -> "form-control col-md-5 mb-5", Symbol("required") -> "true")
+            @inputText(myForm("lname"),Symbol("_label") -> "Last Name",Symbol("name") -> "lname",  Symbol("class") -> "form-control col-md-5 mb-5", Symbol("required") -> "true")
+            @inputText(myForm("email"),Symbol("_label") -> "Email",Symbol("name") -> "email", Symbol("class") -> "form-control col-md-5 mb-5", Symbol("required") -> "true")
+            @inputText(myForm("address"),Symbol("_label") -> "Address",Symbol("name") -> "address", Symbol("class") -> "form-control col-md-5 mb-5", Symbol("required") -> "true")
+            <div id="phoneHolder" class="">
+                @inputText(myForm("phonenumber[]"),Symbol("_label") -> "Phone Number",Symbol("name") -> "phone", Symbol("class") -> "form-control col-md-3 mb-5", Symbol("required") -> "true")
+            </div>
+                    <div class="container row">
+                        <button type="button" id="addBtn" class="btn btn-primary mb-2">Add Phone</button>
+                        <button type="button" id="removeBtn" class="btn btn-primary mx-sm-3 mb-2">Remove Phone</button>
+                    </div>
+
+            @select(myForm("office.id"), options(offices), Symbol("_label") -> "Office", Symbol("_default") -> "-- Choose an office --", Symbol("class") -> "form-control col-md-3 mb-3", Symbol("required") -> "true")
+
+             <div class="">
+                 <button class="btn btn-success" type="submit">Create Employee</button>
+                 <a href="" id="add" class="btn btn-light mx-4" role="button">Cancel</a>
+             </div>
+
+        }
+}
+
+
+a

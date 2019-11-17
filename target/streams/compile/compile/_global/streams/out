@@ -1,0 +1,4 @@
+[0m[[0m[33mwarn[0m] [0m[0m/Users/mehdi/playProjects/employeedirectory/app/views/employees/searchResult.scala.html:10:15: method requestHeader in object PlayMagicForJava is deprecated (since 2.7.0): See https://www.playframework.com/documentation/latest/JavaHttpContextMigration27[0m
+[0m[[0m[33mwarn[0m] [0m[0m        @CSRF.formField[0m
+[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

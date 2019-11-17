@@ -1,0 +1,25 @@
+@(employees: List[Employee])(session : Http.Session)
+
+
+@layout("All Employees")(session) {
+    <div id="empTableHolder" class="container">
+        <table id="empTable">
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Address</th>
+            </thead>
+            <tbody>
+            @for(employee <- employees) {
+                <tr>
+                    <td>@employee.fname</td>
+                    <td>@employee.lname</td>
+                    <td>@employee.email</td>
+                    <td>@employee.address</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}

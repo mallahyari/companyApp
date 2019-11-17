@@ -33,6 +33,11 @@ mysql> select * from user;
 mysql> source path/to/the/create.sql
 ```
 2. Download the source code:
-
-
-
+```
+$ git clone https://github.com/sci2lab/companyApp.git
+$ cd companyApp
+$ sbt update
+$ sbt compile
+$ sbt run
+```
+3. Open the browser and enter <http://localhost:9000>

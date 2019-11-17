@@ -9,8 +9,17 @@ _Design an employee directory in the form of a web application for a company ABC
 2. [sbt](https://www.scala-sbt.org/download.html?_ga=2.252241996.410877668.1573953266-1944032210.1571247971) build tool
 
 ### MySQL Requirement
-MySQL database needs to be installed, as this application uses MySQL as the database. The communication between the application and database is via EBean. EBean is a Java ORM library that uses SQL. For more information, see:
+MySQL database needs to be installed, as this application uses MySQL as the database. The communication between the application and database is via EBean. 
+
+### EBean
+
+EBean is a Java ORM library that uses SQL:
+
 [https://www.playframework.com/documentation/latest/JavaEbean](https://www.playframework.com/documentation/latest/JavaEbean)
+
+and the documentation can be found here:
+
+[https://ebean-orm.github.io/](https://ebean-orm.github.io/)
 
 ### How to Run the Application
 1. Run the `create.sql` file using the following command to create the database along with all the tables and populate it with several dummy data:

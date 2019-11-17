@@ -123,11 +123,6 @@ insert into phone(empid, phonenumber) values(7, "292-979-7031");
 
 
 
--- source /Users/mehdi/playProjects/create.sql
-
-
-
-
 
 
 

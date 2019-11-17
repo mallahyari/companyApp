@@ -1,4 +1,6 @@
-create database if not exists directorydb;
+
+drop database if exists directorydb;
+create database directorydb;
 
 use directorydb;
 
@@ -38,11 +40,11 @@ create table employee (
   office_id int,
   email varchar(255) not null,
   address varchar(255) not null,
-  -- userid int not null,
+  user_id int,
   unique(email),
   unique(address),
-  foreign key (office_id) references office(id)
-  -- foreign key (userid) references user(id)
+  foreign key (office_id) references office(id),
+  foreign key (user_id) references user(id)
 );
 
 drop table if exists phone;
@@ -66,8 +68,16 @@ create table location (
 );
 
 
-insert into user(fname, lname, username, password, type) values('mehdi','allahyari','mehdi','1234','admin');
-insert into user(fname, lname, username, password) values('john','smith','test','test');
+insert into user(fname, lname, username, password, type) values('mehdi','allahyari','mehdi.allahyari@gmail.com','1234','admin');
+insert into user(fname, lname, username, password) values('Alex','Edlyn','aedlyn0@odnoklassniki.ru','test1');
+insert into user(fname, lname, username, password) values('Florrie','Bunston','fbunston1@360.cn','test2');
+insert into user(fname, lname, username, password) values('Herman','Apps','happs2@sogou.com','test3');
+insert into user(fname, lname, username, password) values('Helli','Kliesl','hkliesl3@sciencedaily.com','test4');
+insert into user(fname, lname, username, password) values('Tracy','McGilroy','tmcgilroy4@51.la','test5');
+insert into user(fname, lname, username, password) values('Torin','Arnal','tarnal5@gravatar.com','test6');
+insert into user(fname, lname, username, password) values('Lefty','Bogeys','lbogeys6@japanpost.jp','test7');
+insert into user(fname, lname, username, password) values('John','Smith','test','test');
+
 
 insert into office(officename) values('CompanyABC-Austin');
 insert into office(officename) values('CompanyABC-San Fransisco');
@@ -85,13 +95,14 @@ insert into location(office_id,loc) values(5, 'Los Angeles');
 insert into location(office_id,loc) values(6, 'Seattle');
 
 
-insert into employee(fname,lname,email,address,office_id) values("Alex","Edlyn","aedlyn0@odnoklassniki.ru","99 Monterey Way",1);
-insert into employee(fname,lname,email,address,office_id) values("Florrie","Bunston","fbunston1@360.cn","4 Brown Street",1);
-insert into employee(fname,lname,email,address,office_id) values("Herman","Apps","happs2@sogou.com","44 Eagan Trail",2);
-insert into employee(fname,lname,email,address,office_id) values("Helli","Kliesl","hkliesl3@sciencedaily.com","6 Forest Street",3);
-insert into employee(fname,lname,email,address,office_id) values("Tracy","McGilroy","tmcgilroy4@51.la","0 Brickson Park Court",4);
-insert into employee(fname,lname,email,address,office_id) values("Torin","Arnal","tarnal5@gravatar.com","231 Morningstar Junction",5);
-insert into employee(fname,lname,email,address,office_id) values("Lefty","Bogeys","lbogeys6@japanpost.jp","76 Drewry Terrace",6);
+insert into employee(fname,lname,email,address,office_id,user_id) values("Mehdi","Allahyari","mehdi.allahyari@gmail.com","123 Statesboro",1,1);
+insert into employee(fname,lname,email,address,office_id,user_id) values("Alex","Edlyn","aedlyn0@odnoklassniki.ru","99 Monterey Way",1,2);
+insert into employee(fname,lname,email,address,office_id,user_id) values("Florrie","Bunston","fbunston1@360.cn","4 Brown Street",1,3);
+insert into employee(fname,lname,email,address,office_id,user_id) values("Herman","Apps","happs2@sogou.com","44 Eagan Trail",2,4);
+insert into employee(fname,lname,email,address,office_id,user_id) values("Helli","Kliesl","hkliesl3@sciencedaily.com","6 Forest Street",3,5);
+insert into employee(fname,lname,email,address,office_id,user_id) values("Tracy","McGilroy","tmcgilroy4@51.la","0 Brickson Park Court",4,6);
+insert into employee(fname,lname,email,address,office_id,user_id) values("Torin","Arnal","tarnal5@gravatar.com","231 Morningstar Junction",5,7);
+insert into employee(fname,lname,email,address,office_id,user_id) values("Lefty","Bogeys","lbogeys6@japanpost.jp","76 Drewry Terrace",6,8);
 
 
 

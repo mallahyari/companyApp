@@ -1,5 +1,6 @@
 
-name := """employeeDirectory"""
+// name := """employeeDirectory"""
+name := """companyApp"""
 organization := "com.example"
 
 version := "1.0-SNAPSHOT"
